@@ -1,2 +1,2 @@
 export {environment} from './environment';
-export {AppComponent} from './app.component';
+export {AppComponent} from './components/app/app.component';
