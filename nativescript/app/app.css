@@ -1,0 +1,42 @@
+﻿@import url("~/platform.css");
+
+Page {
+  background-color: white;
+  font-size: 15;
+}
+ActionBar {
+  background-color: cornflowerblue;
+  color: white;
+}
+TextField {
+  padding: 10;
+  font-size: 13;
+  color: black;
+}
+.small-spacing {
+  margin: 5;
+}
+.medium-spacing {
+  margin: 10;
+}
+
+#container {
+  margin-left: 30;
+  margin-right: 30;
+  padding-bottom: 15;
+  background-color: white;
+}
+#logo {
+  margin-top: 5;
+  margin-bottom: 20;
+}
+Button, TextField {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+}
+#submit-button {
+  background-color: cornflowerblue;
+  color: white;
+  margin-top: 20;
+}
