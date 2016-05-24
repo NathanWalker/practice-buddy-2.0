@@ -1,25 +1,26 @@
 import {Component, MagicService} from 'nativescript-ng2-magic';
-import {User} from "../../../app/shared/user/user";
-import {UserService} from "../../../app/shared/user/user.service";
+import {User, UserService} from "../../shared/index";
 
 @Component({
-  selector: 'practice-buddy-app',
+  selector: 'login',
   templateUrl: './app/components/login/login.component.html',
-  styleUrls: ['./app/components/login/login.css'],
-  providers: [UserService]
+  styleUrls: ['./app/components/login/login.component.css'],
+  directives: [MagicService.DEP_ROUTER_DIRECTIVES]
 })
-
 export class LoginComponent {
-  title = "Practice Buddy";
-  public user = new User();
-  isLoggingIn = true;
+  public title: string = "Practice Buddy";
+  public user: User;
+  public isLoggingIn: boolean = true;
+  public test = 'blah';
   
   constructor(private userService: UserService) { 
-    this.user.email = "nativescriptrocks@telerik.com";
-     this.user.password = "password";     
+    this.user = new User({
+      email: "nativescriptrocks@telerik.com",
+      password: "password"
+    });
   }
   
-  login() {
+  public login() {
     this.userService.login(this.user)
       .subscribe(
         //() => this._router.navigate(["List"]),

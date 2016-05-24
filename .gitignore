@@ -1,5 +1,10 @@
+dist
 node_modules
 typings
+nativescript/app/app
+nativescript/hooks
 nativescript/node_modules
 nativescript/platforms
 src/app/**/*.js
+src/app/**/*.map
+tmp

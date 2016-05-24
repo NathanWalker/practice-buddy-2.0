@@ -3,9 +3,12 @@ import {nativeScriptBootstrap} from "nativescript-angular/application";
 import {NS_ROUTER_PROVIDERS, NS_ROUTER_DIRECTIVES} from "nativescript-angular/router";
 import {HTTP_PROVIDERS} from "@angular/http";
 import {MagicService} from "nativescript-ng2-magic";
-MagicService.ROUTER_DIRECTIVES = NS_ROUTER_DIRECTIVES;
+MagicService.DEP_ROUTER_DIRECTIVES = NS_ROUTER_DIRECTIVES;
 
 // import your root component here
-import {AppComponent} from "./app/app.component";
+import {AppComponent} from "./app/components/app/app.component";
 
-nativeScriptBootstrap(AppComponent, [NS_ROUTER_PROVIDERS, HTTP_PROVIDERS], { startPageActionBarHidden: false });
+nativeScriptBootstrap(AppComponent, [
+  HTTP_PROVIDERS,
+  NS_ROUTER_PROVIDERS
+], { startPageActionBarHidden: false });
